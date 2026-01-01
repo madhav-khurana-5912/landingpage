@@ -1,6 +1,6 @@
 ﻿import { memo, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { LiquidSphereWrapper } from '../components/LiquidSphereWrapper';
+import { GoldenBackground } from '../components/GoldenBackground';
 import { ConceptSection } from '../components/ConceptSection';
 import { GallerySection } from '../components/GallerySection';
 import { FloatingDish } from '../components/FloatingDish';
@@ -14,7 +14,7 @@ const Home = memo(({ tier }: { tier: 'high' | 'low' }) => {
     <div className="flex flex-col w-full">
       {/* Hero Section */}
       <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden">
-        <LiquidSphereWrapper tier={tier} />
+        <GoldenBackground />
         
         <div className="relative z-10 flex flex-col items-center text-center px-4 mix-blend-difference pointer-events-none">
           <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="text-primary text-sm md:text-base font-mono tracking-[0.5em] mb-4">EST. 2024</motion.h2>
@@ -57,3 +57,4 @@ const Home = memo(({ tier }: { tier: 'high' | 'low' }) => {
 });
 
 export default Home;
+
